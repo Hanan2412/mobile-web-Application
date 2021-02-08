@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">מנהל תקציב</string>
+    <string name="e_tra">טעינה נכשלה</string>
+    <string name="tra">עידכון מוסד נתונים עבר בהצלחה</string>
+</resources>

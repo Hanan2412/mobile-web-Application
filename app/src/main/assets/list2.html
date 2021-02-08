@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>simple jquerymobile ajax list view</title>
+    <link rel="stylesheet" href=
+            "http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+    <script src=
+                    "http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src=
+                    "http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js">
+    </script>
+    <script src="forList2.js"></script>
+</head>
+<body>
+<div data-role="page" id="home">
+    <div data-role="header">
+        <h1>our title</h1>
+    </div>
+    <div data-role="content">
+        <ul data-role="listview" id="list">
+        </ul>
+    </div>
+    <div data-role="footer">
+        <h4>our footer</h4>
+    </div>
+</div>
+<script type="text/javascript">
+    (function()
+    {
+       // var xhr = new XMLHttpRequest();
+       //  xhr.open("GET","data.json",true);
+       // xhr.onreadystatechange = function()
+        {
+            //if (xhr.readyState == 4 && xhr.status == 200)
+            {
+                var list = document.getElementById('list');
+                var data = createJson2();
+                //var data = xhr.responseText;
+                data.forEach(function (dt) {
+                    console.log(dt);
+                    var li = document.createElement("li");
+                    var a = document.createElement("a");
+                    var text = document.createTextNode(dt.country);
+                    a.appendChild(text);
+                    a.setAttribute("href","#");
+                    li.appendChild(a);
+                    list.appendChild(li);
+
+                });
+
+              /* var vec = JSON.parse(data);
+                vec.forEach(
+                    function(ob)
+                    {
+                        var li = document.createElement("li");
+                        var a = document.createElement("a");
+                        var text = document.createTextNode(ob.country);
+                        a.appendChild(text);
+                        a.setAttribute("href","#");
+                        li.appendChild(a);
+                        list.appendChild(li);
+                    }
+                );*/
+               // $('#list').listview('refresh');
+            }
+        }
+        //xhr.send();
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Cost Manager</string>
+    <string name="e_tra">Couldnt load transaction</string>
+    <string name="tra">transaction saved to database</string>
+</resources>
